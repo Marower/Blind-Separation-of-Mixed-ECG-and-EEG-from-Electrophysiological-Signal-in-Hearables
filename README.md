@@ -105,6 +105,9 @@ histfit(distribution, 3, 'normal');
 
 title('Histogram with Normal Distribution Fit');
 ```
+
+![input](Input.png)
+![output](NetworkOut.png)
 ## Plot confidence plot
 ```
 % Plot confidence intervals around the mean prediction
@@ -148,3 +151,4 @@ legend([h5,h1,h3],{'mean value', '\pmstd', '\pm2std'})
 xlim([sequenceLength,sequenceLength+60])
 ylim([min(sm2),max(sp2)])
 ```
+![plot](ConfidencePlot.png)
