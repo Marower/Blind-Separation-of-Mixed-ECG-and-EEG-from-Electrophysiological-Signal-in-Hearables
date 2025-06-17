@@ -4,7 +4,7 @@
 # Confidence plot example
 ## Initialize encoder-decoder network
 
-
+```
 % Original W-net example can be opened with:
 % openExample('signal/SignalSourceSeparationWithWnetExample')
 
@@ -59,9 +59,9 @@ layers = [
 
 lgraph = layerGraph(layers);
 net = dlnetwork(lgraph);
-
+```
 ## Generate data
-
+```
 % Generate and normalize input data
 input = pinknoise(1,sequenceLength*3);
 input = (input -mean(input))/(max(input)-min(input));
@@ -104,9 +104,9 @@ figure
 histfit(distribution, 3, 'normal'); 
 
 title('Histogram with Normal Distribution Fit');
-
+```
 ## Plot confidence plot
-
+```
 % Plot confidence intervals around the mean prediction
 
 index = find(~isnan(m));
@@ -147,3 +147,4 @@ legend([h5,h1,h3],{'mean value', '\pmstd', '\pm2std'})
 % Zoom in
 xlim([sequenceLength,sequenceLength+60])
 ylim([min(sm2),max(sp2)])
+```
